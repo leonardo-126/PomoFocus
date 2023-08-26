@@ -1,0 +1,32 @@
+@use '../../variables';
+
+.container-timer {
+    width: 100%;
+    &-timer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        h1 {
+            font-size: 120px;
+            color: variables.$text-color;
+            letter-spacing: 5px;
+        }
+    }
+    &-start {
+        width: 200px;
+        margin: 0 auto;
+        button {
+            cursor: pointer;
+            margin: 20px 0 20px;
+            height: 50px;
+            width: 200px;
+            border-radius: 6px;
+            border: none;
+            h1 {
+                font-size: 22px;
+                color: variables.$bg-color;   
+            }
+        }
+    }
+}
