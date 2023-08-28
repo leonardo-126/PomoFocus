@@ -6,7 +6,7 @@ export const secondToTime = (time) => {
         minutesFormat = "0" + minutesFixed
     }
     const seconds = time % 60
-    var secondsFormat = seconds
+    var secondsFormat = ''
 
     if(seconds < 10) {
         secondsFormat = "0" + seconds
