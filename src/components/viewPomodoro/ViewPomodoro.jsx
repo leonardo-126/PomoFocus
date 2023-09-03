@@ -5,20 +5,29 @@ import { secondToTime } from './secondToTime/secondToTime'
 export const ViewPomodoro = (props) => {
     const [time, setTime] = useState(1500) 
     const  [start, setStart] = useState(false)
-
+    const [btnColor, setBtnColor] = useState('rgb(57, 112, 151)')
+    
     // navegacao
     useEffect(() => {
         if (props.type == "pomodoro") {
             setTime(1500)
             setStart(false)
+            setBtnColor('rgb(57, 112, 151)')
         }else if (props.type == "short") {
             setTime(300)
             setStart(false)
+            setBtnColor('#7D53A2')
         }else {
             setTime(3600)
             setStart(false)
+            setBtnColor('#BA4949')
         }
     }, [props.type])
+
+    //mudando cor btn
+    const btn = {
+        color: btnColor,
+    }
 
     //timer
     useEffect(() => {
@@ -30,11 +39,6 @@ export const ViewPomodoro = (props) => {
         } else if (time === 0) {
             setStart(false)
             window.alert("Finish your time")
-            if (props.type == "short"){
-                
-            }
-
-
         }
         return () => {
             clearInterval(startTimer)
@@ -58,7 +62,7 @@ export const ViewPomodoro = (props) => {
             </div>
             <div className="container-timer-start">
                 <button onClick={start ? handlePause : handleStart}>
-                    <h1>{start ? 'Pause' : 'Start'}</h1>
+                    <h1 style={btn}>{start ? 'Pause' : 'Start'}</h1>
                 </button>
             </div>
         </div>
