@@ -35,7 +35,7 @@ export const Header = () => {
                                 <a href="#" onClick={modalTongle}><AiOutlineSetting/>Setting</a>
                             </li>
                             <li>
-                                <a href="#"><IoMdContact/>Report</a>
+                                <a href="#"><IoMdContact/>Login</a>
                             </li>
                         </ul>
                     </nav>
