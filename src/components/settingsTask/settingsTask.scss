@@ -1,0 +1,66 @@
+@use '../../variables';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    border-bottom: 1px solid variables.$text-color-st-border;
+    &-title {
+        color: variables.$text-color-st-title;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        font-size: 18px;
+        height: 60px;
+
+        span {
+            font-size: 18px;
+        }
+    }
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        h1 {
+
+            color: variables.$text-color-st-main;
+            font-size: 18px;
+            
+        }
+        &-todoist {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgb(224, 224, 224);
+            color: rgb(85, 85, 85);
+            padding: 8px 12px;
+            gap: 5px;
+            cursor: pointer;
+            background-color: rgb(248, 247, 247);
+            span {
+                font-size: 14px;
+            }
+        }
+        &-webhook {
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgb(224, 224, 224);
+            color: rgb(85, 85, 85);
+            padding: 8px 12px;
+            gap: 5px;
+            cursor: pointer;
+            background-color: rgb(248, 247, 247);
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+}

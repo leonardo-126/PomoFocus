@@ -6,7 +6,7 @@
 }
 .header-container {
     width: 640px;
-    height: 100px;
+    height: 80px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
 
         .header-content-logo { 
             a {
-                font-size: 28px;
+                font-size: 20px;
                 display: flex;
                 align-items: center;
                 letter-spacing: 1.2px;
@@ -38,13 +38,11 @@
                     padding: 5px 10px;
                     border-radius: 4px;
                     a {
-                        letter-spacing: 1.2px;
                         gap: 5px;
-                        color: #FFF;
-                        font-size: 18px;
+                        color: variables.$text-color;
+                        font-size: 15px;
                         display: flex;
                         align-items: center;
-                        opacity: 0.8;
                     }
                 }
             }

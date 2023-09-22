@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './viewPomodoro.scss'
 import { secondToTime } from './secondToTime/secondToTime'
+import { SettingsTimer } from '../SettingsTimer/SettingsTimer'
 
 export const ViewPomodoro = (props) => {
     const [time, setTime] = useState(1500) 
@@ -56,15 +57,17 @@ export const ViewPomodoro = (props) => {
 
 
     return (
-        <div className="container-timer">
-            <div className="container-timer-timer">
-                <h1>{secondToTime(time)}</h1>
+        <>
+            <div className="container-timer">
+                <div className="container-timer-timer">
+                    <h1>{secondToTime(time)}</h1>
+                </div>
+                <div className="container-timer-start">
+                    <button onClick={start ? handlePause : handleStart}>
+                        <h1 style={btn}>{start ? 'Pause' : 'Start'}</h1>
+                    </button>
+                </div>
             </div>
-            <div className="container-timer-start">
-                <button onClick={start ? handlePause : handleStart}>
-                    <h1 style={btn}>{start ? 'Pause' : 'Start'}</h1>
-                </button>
-            </div>
-        </div>
+        </>
     )
 }

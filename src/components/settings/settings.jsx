@@ -2,6 +2,8 @@ import './settings.scss'
 import { AiOutlineClose } from 'react-icons/ai';
 import { SettingsTimer } from '../SettingsTimer/SettingsTimer';
 import { SettingsTheme } from '../SettingsTheme/SettingsTheme';
+import { SettingsTask } from '../settingsTask/settingsTask';
+import { SettingsIntegration } from '../settingsIntergration/settingsIntergration';
 
 export const Settings = (props) => {
 
@@ -17,9 +19,11 @@ export const Settings = (props) => {
                     <i><AiOutlineClose onClick={props.setModalProps}/></i>
                 </div>
                 <SettingsTimer/>
+                <SettingsTask/>
                 <SettingsTheme/>
-                <div>
-                    teste
+                <SettingsIntegration/>
+                <div className="container-st-child-content-exit">
+                    <button onClick={props.setModalProps}>OK</button>
                 </div>
             </div>
         </div>

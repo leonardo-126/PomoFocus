@@ -2,7 +2,7 @@ import { ButtonSettings } from '../buttonSettings/buttonSettings';
 import './SettingsTimer.scss';
 import { BiAlarm } from 'react-icons/bi';
 
-export const SettingsTimer = () => {
+export const SettingsTimer = (props) => {
     return (
         <div className='container-st-child-content-timer'>
             <div className="container-st-child-content-timer-title">
@@ -34,8 +34,8 @@ export const SettingsTimer = () => {
                 <ButtonSettings/>
             </div>
             <div className="container-st-child-content-timer-breaks">
-                <h1>Long Break interval</h1>
-                <input type="number" />
+                <h1>Long Break interval </h1>
+                <input type="number"/>
             </div>
         </div>
     )

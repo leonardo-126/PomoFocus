@@ -12,12 +12,6 @@ export const Header = () => {
         setModalSetting(!modalSetting)
         
     }
-    
-    useEffect(() => {
-
-        console.log(modalSetting)
-    },[modalSetting])
-
 
     return (
         <>
